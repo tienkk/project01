@@ -6,106 +6,126 @@
     android:layout_height="wrap_content"
     android:padding="8dp">
 
-
     <TextView
-        android:id="@+id/txtPrice"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="36dp"
-        android:gravity="end"
-        android:text="sl"
-        app:layout_constraintStart_toEndOf="@+id/imgFood"
+        android:id="@+id/btnDelete"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:text="Delete"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imgFood"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainContent"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <LinearLayout
-        android:id="@+id/Linear1"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="28dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgFood"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="36dp"
+            android:gravity="end"
+            android:text="sl"
+            app:layout_constraintStart_toEndOf="@+id/imgFood"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgFood"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:id="@+id/Linear1"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgFood"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/txtSum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="end"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="$" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtSum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="end"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnAdd"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/add" />
+
+                <TextView
+                    android:id="@+id/txtNumber"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="12" />
+
+                <ImageButton
+                    android:id="@+id/btnSubtract"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/remove" />
+            </LinearLayout>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="36dp"
+            android:text="$"
+            app:layout_constraintStart_toEndOf="@+id/txtPrice"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/btnAdd"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/add" />
-
-            <TextView
-                android:id="@+id/txtNumber"
-                android:layout_width="20dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="12" />
-
-            <ImageButton
-                android:id="@+id/btnSubtract"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/remove" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="10dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="36dp"
-        android:text="$"
-        app:layout_constraintStart_toEndOf="@+id/txtPrice"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtFood"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="108dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imgFood"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txtFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="108dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/imgFood"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,7 +49,7 @@ class MainActivity2 : AppCompatActivity() {
                 isPopular = true
             )
         )
-        insert(sampleFoods)
+//        insert(sampleFoods)
 
     }
 
@@ -61,7 +61,7 @@ class MainActivity2 : AppCompatActivity() {
             val foodDaos = db.foodDao()
             val carts = db.cartDao()
             val cart1 = carts.getCartItems()
-            val listCart = carts.getCartItem()
+//            val listCart = carts.getCartItem()
 
             val listFoods = foodDaos.getDescriptionFoods()
             foodDao.forEach {

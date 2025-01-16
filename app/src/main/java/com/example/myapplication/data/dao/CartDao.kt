@@ -14,11 +14,11 @@ interface CartDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addToCart(cart: Cart)
 
-    @Query("Select * from cart")
-    suspend fun getCartItems():List<Cart>
+    @Query("SELECT * FROM cart")
+    fun getCartItems(): LiveData<List<Cart>>
 
     @Delete
-    suspend fun Delete(cart: Cart)
+    suspend fun delete(cart: Cart)
 
     @Query("""
         SELECT 
@@ -31,8 +31,11 @@ interface CartDao {
         FROM cart
         INNER JOIN food ON cart.foodID = food.id
     """)
-    suspend fun getCartItem(): List<CartItem>
+    fun getCartItemsWithDetails(): LiveData<List<CartItem>>
 
+    @Delete
+    suspend fun DeleteCart(cart: Cart)
 
-
+    @Query("UPDATE cart SET quantity = :quantity WHERE id = :cartId")
+    suspend fun updateQuantity(cartId: Int, quantity: Int)
 }
