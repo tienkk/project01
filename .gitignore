@@ -1,0 +1,37 @@
+# Thư mục build và tệp tạm thời
+/build/
+/.gradle/
+/.idea/
+/out/
+
+# Tệp của hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Tệp cấu hình cục bộ
+local.properties
+*.iml
+
+# Tệp nhật ký
+*.log
+
+# Tệp của hệ thống IntelliJ
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+
+# Tệp được tạo tự động
+*.apk
+*.ap_
+*.db
+*.cxx
+*.lock
+
+# Thư mục NDK (Native Development Kit)
+.cxx/
+
+# Tệp khác không cần thiết
+*.keystore
